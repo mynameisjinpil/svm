@@ -7,12 +7,12 @@ X=[]
 y=[]
 
 for i in range(len(data)):
-	if (i%5==4):
+	if (i%2==1):
 		y.append(data[i])
 	else:
 		x.append(data[i])
 
-X=zip(x[0::4],x[1::4],x[2::4],x[3::4])
+X=zip(x[0::1])
 y=map(int,y)
 
 #print X

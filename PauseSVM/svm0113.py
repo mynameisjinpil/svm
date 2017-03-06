@@ -13,7 +13,7 @@ gamma_range = np.logspace(-9, 3, 13)
 
 param_grid = dict(gamma=gamma_range, C=C_range)
 
-cv = StratifiedShuffleSplit(n_splits=1, test_size=0.2, random_state=None)
+cv = StratifiedShuffleSplit(n_splits=4, test_size=0.2, random_state=None)
 
 grid = GridSearchCV(SVC(), param_grid=param_grid, cv=cv)
 grid.fit(dataTransform.X, dataTransform.y)
